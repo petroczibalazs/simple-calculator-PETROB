@@ -1,0 +1,205 @@
+html{
+  font-size: 10px;
+}
+
+body{
+  margin: 0;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  background-color: var(--main-background);
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+.app{
+  width: 100%;
+  max-width: 54rem;
+  min-width: 37.5rem;
+}
+
+.themes{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 3rem;
+  color: var(--display-text-color);
+  margin-bottom: 2.7rem;
+  padding: 0 0 0 1rem;
+}
+
+.themes > span{
+  font-size: 3rem;
+}
+
+.themes-controls{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.themes-controls > span{
+  font-size: 1.3rem;
+  display: inline-block;
+  margin-top: 1.4rem;
+}
+
+.themes-picker{
+  display: grid;
+  align-items: flex-end;
+}
+
+.themes-ordinals{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0.2rem;
+}
+
+.themes-slider {
+  background: var(--slider-track-background);
+  width: 65px;
+  height: 25px;
+  border-radius: 10px;
+  padding:5px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+
+.themes-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: var(--slider-thumb-background);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.themes-slider::-webkit-slider-runnable-track{
+  background: var(--slider-track-background);
+}
+
+
+
+.themes-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  background: var(--slider-thumb-background);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.themes-slider::-moz-range-track{
+  background: var(--slider-track-background)
+}
+
+
+.display{
+  height: 12.8rem;
+  background-color: var(--screen-background);
+  color: var(--display-text-color);
+  border-radius: 10px;
+  text-align: right;
+  font-size: 5.5rem;
+  display: grid;
+  align-items: center;
+  justify-items: end;
+  padding: 0 30px 0 10px;
+  position: relative;
+  overflow-block: auto;
+}
+
+.display-input{
+  position: absolute;
+  font-weight: normal;
+  font-size: 12px;
+  top: 0;
+  right: 0;
+  margin: 15px 30px auto;
+}
+
+
+
+/* keys*/
+
+.keys{
+  display: grid;
+  padding: 3.2rem;
+  border-radius: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 5.5rem);
+  column-gap: 2.3rem;
+  row-gap: 3.3rem;
+  background-color: var(--keypad-background);
+  margin-top: 2.4rem;
+}
+
+.key{
+  display: grid;
+  place-items: center;
+  font-size: 3.4rem;
+  font-weight: 900;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  border-radius: 1rem;
+  color: var(--key-color);
+  background-color: var(--key-background);
+  box-shadow:
+  var(--key-shadow) 0 3px 3px,
+  var(--key-background) 0 5px 1px,
+  var(--key-shadow) 0 7px 2px -4px;
+  transition: box-shadow .1s ease-in;
+}
+
+.key-equals{
+  color: var(--key-color--equals);
+  background-color: var(--key-background--equals);
+  font-size: 2rem;
+  box-shadow:
+  var(--key-shadow--equals) 0 3px 3px -1px,
+  var(--key-background--equals) 0 5px 1px,
+  var(--key-shadow--equals) 0 6px 2px -3px;
+}
+
+.key-delete,
+.key-reset{
+  color: var(--key-color--del_reset);
+  background-color: var(--key-background--del_reset);
+  font-size: 2.2rem;
+  box-shadow:
+  var(--key-shadow--del_reset) 0 3px 3px -1px,
+  var(--key-background--del_reset) 0 4px 1px,
+  var(--key-shadow--del_reset) 0 6px 2px -3px;
+}
+
+.pressed{
+  box-shadow:
+  var(--key-shadow) 0 1px 1px,
+  var(--key-background) 0 2px 1px,
+  var(--key-shadow) 0 3px 2px -3px;
+
+}
+
+.key-reset{
+  grid-column: 1 / span 2;
+}
+
+.key-equals{
+  grid-column: span 2 / -1;
+}

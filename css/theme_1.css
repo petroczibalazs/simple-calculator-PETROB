@@ -1,0 +1,33 @@
+
+
+/* main backgrounds */
+:root {
+  --main-background: hsl(222, 26%, 31%);
+  --keypad-background: hsl(223, 31%, 20%);
+  --screen-background: hsl(224, 36%, 15%);
+}
+
+/* Key backgrounds and shadows */
+:root {
+  --key-background--del_reset: hsl(225, 21%, 49%);
+  --key-shadow--del_reset: hsl(224, 28%, 35%);
+  --key-background--equals: hsl(6, 63%, 50%);
+  --key-shadow--equals: hsl(6, 70%, 34%);
+  --key-background: hsl(30, 25%, 89%);
+  --key-shadow: hsl(28, 16%, 65%);
+}
+
+/* key text colors */
+:root {
+  --key-color: hsl(221, 14%, 31%);
+  --key-color--del_reset: hsl(0, 0%, 100%);
+  --key-color--equals : hsl(0, 0%, 100%);
+}
+
+/* display colors */
+:root {
+  --display-text-color: hsl(0, 0%, 100%);
+  --slider-thumb-background: hsl(6, 63%, 50%);
+  --slider-track-background: hsl(225, 30%, 21%);
+}
+
